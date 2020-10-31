@@ -51,7 +51,7 @@ h1,h2 {
 .volume {
   position: fixed;
   top: 70px;
-  right: 90px;
+  right: 120px;
   z-index: 200; 
   padding: 10px 24px; 
   -webkit-appearance: none;
