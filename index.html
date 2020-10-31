@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="scroll-text">
+      <h2>Episode IV</h2>
+      <h1>A NEW HOPE</h1>
+      <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory
+        against the evil Galactic Empire.</p>
+      <p>During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR,
+        an armored space station with enough power to destroy an entire planet.</p>
+      <p>Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen
+        plans that can save her people and restore freedom to the galaxy....</p>
+    </div>    
+  </div>
+  <audio class="music" autoplay>
+    <source src="star_wars.mp3" type="audio/mpeg">
+  </audio>
+  <div class="btn-group">
+    <button class="play">Play</button>
+    <button class="pause">Pause</button>
+  </div>
+  <input type="range" class="volume" max="1" min="0" value="0.5" step="0.1" onchange="changeVolume(this.value)">
+</body>
+
+</html>
+
+<script>
+  const music = document.querySelector('.music')
+  const btnPlay = document.querySelector('.play')
+  const btnPause = document.querySelector('.pause')
+  const vol = document.querySelector('volume');
+  const btnMute = document.querySelector('mute');
+
+
+  document.addEventListener('load', () => music.play())
+  btnPlay.addEventListener('click', () => music.play())
+  btnPause.addEventListener('click', () => music.pause())
+
+  function changeVolume(amount) {
+    music.volume = amount
+  }
+  
+</script>
