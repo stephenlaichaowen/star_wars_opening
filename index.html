@@ -37,10 +37,8 @@
   const music = document.querySelector('.music')
   const btnPlay = document.querySelector('.play')
   const btnPause = document.querySelector('.pause')
-  const vol = document.querySelector('volume');
-
-
-  document.addEventListener('load', () => music.autoplay)
+  const vol = document.querySelector('volume')
+  
   btnPlay.addEventListener('click', () => music.play())
   btnPause.addEventListener('click', () => music.pause())
 
